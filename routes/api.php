@@ -20,7 +20,7 @@ Route::get('/todolist', [TodolistController::class, 'index']);
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/todolist', [TodolistController::class, 'store']);
     Route::put('/todolist/{id}', [TodolistController::class, 'update']);
-    Route::delete('/todolist/{id}', [TodolistController::class, 'destory']);
+    Route::delete('/todolist/{id}', [TodolistController::class, 'destroy']);
 });
 
 
